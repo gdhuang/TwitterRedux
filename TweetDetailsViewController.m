@@ -30,7 +30,7 @@
     self.timestamp.text = [dateFormatter stringFromDate:_tweet.createdAt] ;
     [self.avatarImage setImageWithURL: [NSURL URLWithString:_tweet.user.profileImageUrl]];
     self.numRetweets.text = [NSString stringWithFormat:@"%@ RETWEETS", _tweet.retweetCount];
-    self.numRetweets.text = [NSString stringWithFormat:@"%@ FAVORITES", _tweet.favoriteCount];
+    self.numFavorites.text = [NSString stringWithFormat:@"%@ FAVORITES", _tweet.favoriteCount];
     
     
     if(_tweet.retweeted) {
