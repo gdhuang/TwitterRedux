@@ -12,7 +12,9 @@
 #import "TwitterClient.h"
 #import "Tweet.h"
 #import "User.h"
-
+#import "SideMenuViewController.h"
+#import "MenuViewController.h"
+#import "ContentViewController.h"
 
 @interface AppDelegate ()
 
@@ -32,7 +34,13 @@
     if(user!=nil) {
         NSLog(@"welcome %@", user.name);
         
-        self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[TweetsViewController alloc] init]];
+        //self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[TweetsViewController alloc] init]];
+        
+        MenuViewController * mvc = [[MenuViewController alloc] init];
+        ContentViewController *cvc = [[ContentViewController alloc] init];
+        
+        self.window.rootViewController = [[SideMenuViewController alloc] initWithMenuViewController:mvc contentViewController:cvc];
+        
         
     } else {
         self.window.rootViewController = [[LoginViewController alloc] init];

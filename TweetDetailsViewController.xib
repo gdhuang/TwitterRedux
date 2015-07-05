@@ -87,8 +87,8 @@
                     </state>
                     <variation key="default">
                         <mask key="constraints">
-                            <exclude reference="ouS-z8-3OK"/>
                             <exclude reference="QbM-Gf-dI9"/>
+                            <exclude reference="ouS-z8-3OK"/>
                         </mask>
                     </variation>
                     <connections>
@@ -108,8 +108,8 @@
                     </state>
                     <variation key="default">
                         <mask key="constraints">
-                            <exclude reference="fwv-02-qDa"/>
                             <exclude reference="64r-SQ-7uU"/>
+                            <exclude reference="fwv-02-qDa"/>
                         </mask>
                     </variation>
                     <connections>
