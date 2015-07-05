@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MyMenuViewController.h"
 
-@interface ContentViewController : UIViewController
+
+@interface ContentViewController : UIViewController<MenuViewContentControllerDelegate>
+
+
+- (void)didSelectMenuItem:(id)selectedItem;
 
 @end

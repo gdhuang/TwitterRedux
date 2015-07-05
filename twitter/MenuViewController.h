@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SideMenuViewController.h"
+
+@class SideMenuViewController;
 
 @interface MenuViewController : UIViewController
 
+@property (nonatomic, weak) SideMenuViewController *sideMenuViewController;
+
+
 @end
+
+

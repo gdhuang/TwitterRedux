@@ -7,11 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MenuViewController.h"
+
+@class MenuViewController;
 
 @interface SideMenuViewController : UIViewController
 
 
+- (id)initWithMenuViewController:(MenuViewController *)mvc contentViewController:(UIViewController *)cvc;
 
-- (id)initWithMenuViewController:(UIViewController *)mvc contentViewController:(UIViewController *)cvc;
 
+- (void) openSideMenu;
+- (void) closeSideMenu;
 @end

@@ -13,7 +13,7 @@
 #import "Tweet.h"
 #import "User.h"
 #import "SideMenuViewController.h"
-#import "MenuViewController.h"
+#import "MyMenuViewController.h"
 #import "ContentViewController.h"
 
 @interface AppDelegate ()
@@ -36,8 +36,11 @@
         
         //self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[TweetsViewController alloc] init]];
         
-        MenuViewController * mvc = [[MenuViewController alloc] init];
+        MyMenuViewController * mvc = [[MyMenuViewController alloc] init];
         ContentViewController *cvc = [[ContentViewController alloc] init];
+        
+        mvc.delegate = cvc;
+        
         
         self.window.rootViewController = [[SideMenuViewController alloc] initWithMenuViewController:mvc contentViewController:cvc];
         

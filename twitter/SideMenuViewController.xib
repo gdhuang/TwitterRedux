@@ -17,17 +17,27 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BZW-lb-cKc">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BZW-lb-cKc">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1MT-37-TlY">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1MT-37-TlY">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="1MT-37-TlY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="3Zy-hR-quz"/>
+                <constraint firstItem="BZW-lb-cKc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Row-SV-r1a"/>
+                <constraint firstAttribute="trailing" secondItem="1MT-37-TlY" secondAttribute="trailing" id="VPQ-e8-JwH"/>
+                <constraint firstAttribute="trailing" secondItem="BZW-lb-cKc" secondAttribute="trailing" id="fIj-fT-kzX"/>
+                <constraint firstAttribute="bottom" secondItem="1MT-37-TlY" secondAttribute="bottom" id="ic5-88-gh2"/>
+                <constraint firstAttribute="bottom" secondItem="BZW-lb-cKc" secondAttribute="bottom" id="iva-Js-mdO"/>
+                <constraint firstItem="1MT-37-TlY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="nS0-D2-T5E"/>
+                <constraint firstItem="BZW-lb-cKc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="zcr-Zz-x6M"/>
+            </constraints>
             <connections>
                 <outletCollection property="gestureRecognizers" destination="9LQ-MU-RKm" appends="YES" id="Wdh-Kg-AZ2"/>
             </connections>

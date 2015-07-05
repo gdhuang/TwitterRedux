@@ -15,7 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIView *contentView;
 @property (strong, nonatomic) IBOutlet UIPanGestureRecognizer *sideMenuPanGesture;
 
-@property (strong, nonatomic) UIViewController* menuViewController;
+@property (strong, nonatomic) MenuViewController* menuViewController;
 @property (strong, nonatomic) UIViewController* contentViewController;
 
 @end
@@ -24,10 +24,12 @@
 
 
 
-- (id)initWithMenuViewController:(UIViewController *)mvc contentViewController:(UIViewController *)cvc {
+- (id)initWithMenuViewController:(MenuViewController *)mvc contentViewController:(UIViewController *)cvc {
     self = [super init];
     
     self.menuViewController = mvc;
+    self.menuViewController.sideMenuViewController = self;
+    
     self.contentViewController = cvc;
     
     return self;
@@ -41,7 +43,7 @@
     self.menuViewController.view.frame = self.menuView.frame;
     [self.menuView addSubview:self.menuViewController.view];
     
-    self.contentViewController.view.frame = self.contentView.bounds;
+    self.contentViewController.view.frame = self.contentView.frame;
     [self.contentView addSubview:self.contentViewController.view];
 
 }
@@ -59,22 +61,30 @@
     } else if (self.sideMenuPanGesture.state == UIGestureRecognizerStateChanged) {
         self.contentView.center = CGPointMake(point.x + offset, self.contentView.center.y);
     } else if (self.sideMenuPanGesture.state == UIGestureRecognizerStateEnded) {
-        CGRect contentFrame = self.contentView.frame;
-        CGSize contentSize = contentFrame.size;
         if ([self.sideMenuPanGesture velocityInView:self.view].x > 0) {
-            [UIView animateWithDuration:0.4 delay:0 usingSpringWithDamping:0.6 initialSpringVelocity:10 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-                self.contentView.frame = CGRectMake(self.view.frame.size.width-50, 0, contentSize.width, contentSize.height);
-            } completion:^(BOOL finished) {
-            }];
+            [self openSideMenu];
         } else {
-            [UIView animateWithDuration:0.2 animations:^{
-                self.contentView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
-            }];
+            [self closeSideMenu];
         }
-        
     }
-    
 }
+
+- (void) openSideMenu {
+    CGRect contentFrame = self.contentView.frame;
+    CGSize contentSize = contentFrame.size;
+    [UIView animateWithDuration:0.4 delay:0 usingSpringWithDamping:0.6 initialSpringVelocity:10 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        self.contentView.frame = CGRectMake(self.view.frame.size.width-50, 0, contentSize.width, contentSize.height);
+        
+    } completion:^(BOOL finished) {
+    }];
+}
+
+- (void) closeSideMenu {
+    [UIView animateWithDuration:0.2 animations:^{
+        self.contentView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+    }];
+}
+
 
 /*
 #pragma mark - Navigation

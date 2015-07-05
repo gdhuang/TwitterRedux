@@ -110,7 +110,6 @@
 -(CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 60;//workaround: UITableView layout messing up on push segue and return
 }
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     TweetDetailsViewController *vc = [[TweetDetailsViewController alloc] init];
     vc.tweet = self.tweets[indexPath.row];
