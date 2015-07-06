@@ -19,7 +19,10 @@
 - (void)openURL:(NSURL *)url;
 
 - (void)homeTimelineWithParms:(NSDictionary*)params completion:(void (^)(NSArray* tweets, NSError* error))completion;
-                                                                 
+
+- (void)mentionsTimelineWithParms:(NSDictionary*)params completion:(void (^)(NSArray* tweets, NSError* error))completion;
+
+
 - (void)postTweet:(NSString *)tweetText success:(void (^)(Tweet *tweet))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 
 

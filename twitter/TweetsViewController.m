@@ -28,6 +28,12 @@
 @implementation TweetsViewController
 
 
+-(id)initWithTimelineType:(NSString*)type {
+    self = [super init];
+    self.timelineType = type;
+    
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -61,14 +67,22 @@
 
 - (void) updateTimeline {
     
-    [[TwitterClient sharedInstance] homeTimelineWithParms:nil completion:^(NSArray *tweets, NSError *error) {
+    
+    SEL api;
+    
+    if([self.timelineType isEqualToString:@"mentions"]) {
+        api = @selector(mentionsTimelineWithParms:completion:);
+    } else {
+        api = @selector(homeTimelineWithParms:completion:);
+    }
+
+    [[TwitterClient sharedInstance] performSelector:api withObject:nil withObject:^(NSArray *tweets, NSError *error) {
         NSLog(@"%@", tweets);
         [self.refreshControl endRefreshing];
         
         self.tweets = tweets;
         [self.tableview reloadData];
     }];
-    
 }
 
 - (void) onNewTweet {

@@ -13,4 +13,7 @@
 
 @interface TweetsViewController : UIViewController<UITableViewDataSource, UITableViewDelegate,NewTweetViewControllerDelegate,TweetDetailsViewControllerDelegate>
 
+@property (nonatomic,strong) NSString *timelineType;
+-(id)initWithTimelineType:(NSString*)type;
+
 @end

@@ -30,8 +30,8 @@
     // Do any additional setup after loading the view from its nib.
     
     
-    self.tweetsViewController = [[TweetsViewController alloc] initWithNibName:@"TweetsViewController" bundle:nil];
-    self.mentionsViewController = [[MentionsViewController alloc] initWithNibName:@"MentionsViewController" bundle:nil];
+    self.tweetsViewController = [[TweetsViewController alloc] initWithTimelineType:@"home"];
+    self.mentionsViewController = [[TweetsViewController alloc] initWithTimelineType:@"mentions"];
     self.profileViewController = [[ProfileViewController alloc] initWithUser:[User currentUser]];
     self.nvc = [[UINavigationController alloc] init];
     

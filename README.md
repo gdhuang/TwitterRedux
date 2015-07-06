@@ -7,22 +7,22 @@ Time spent: `10hr`
 
 #### Required
 
-- [v] User can sign in using OAuth login flow
-- [v] User can view last 20 tweets from their home timeline
-- [v] The current signed in user will be persisted across restarts
-- [v] In the home timeline, user can view tweet with the user profile picture, username, tweet text, and timestamp.  In other words, design the custom cell with the proper Auto Layout settings.  You will also need to augment the model classes.
-- [v] User can pull to refresh
-- [v] User can compose a new tweet by tapping on a compose button.
-- [v] User can tap on a tweet to view it, with controls to retweet, favorite, and reply.
-#### Optional
-- [ ] When composing, you should have a countdown in the upper right for the tweet limit.
-- [ ] After creating a new tweet, a user should be able to view it in the timeline immediately without refetching the timeline from the network.
-- [ ] Retweeting and favoriting should increment the retweet and favorite count.
-- [ ] User should be able to unretweet and unfavorite and should decrement the retweet and favorite count.
-- [ ] Replies should be prefixed with the username and the reply_id should be set when posting the tweet,
-- [ ] User can load more tweets once they reach the bottom of the feed using infinite loading similar to the actual Twitter client.
+Hamburger menu
+
+    [v] Dragging anywhere in the view should reveal the menu.
+    [v] The menu should include links to your profile, the home timeline, and the mentions view.
+    [v] The menu can look similar to the LinkedIn menu below or feel free to take liberty with the UI.
+
+Profile page
+
+    [v] Contains the user header view
+    [v] Contains a section with the users basic stats: # tweets, # following, # followers
+
+Home Timeline
+
+    [v] Tapping on a user image should bring up that user's profile page
 
 ### Walkthrough
 
-![Video Walkthrough](https://github.com/gdhuang/twitter/blob/master/twitter.gif)
+![Video Walkthrough](https://github.com/gdhuang/TwitterRedux/blob/master/twitter.gif)
 
