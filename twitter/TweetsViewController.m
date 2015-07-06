@@ -13,6 +13,7 @@
 #import "TweetsTableViewCell.h"
 #import "NewTweetViewController.h"
 #import "TweetDetailsViewController.h"
+#import "ProfileViewController.h"
 
 @interface TweetsViewController ()
 
@@ -93,6 +94,18 @@
     [User logout];
 }
 
+
+- (void)onTap:(UITapGestureRecognizer*) sender {
+    UIImageView *avatarImage = sender.view;
+    Tweet * tweet = self.tweets[avatarImage.tag];
+    User* user = tweet.user;
+    
+    
+    ProfileViewController *vc = [[ProfileViewController alloc] initWithUser:user];
+    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:vc];
+    [self presentViewController:nvc animated:NO completion:nil];
+}
+
 #pragma mark - table view
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -102,6 +115,11 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TweetsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TweetsTableViewCell" forIndexPath:indexPath];
     cell.tweet = self.tweets[indexPath.row];
+    cell.avatarImage.tag = indexPath.row;
+
+    UITapGestureRecognizer *tapped = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTap:)];
+    tapped.numberOfTapsRequired = 1;
+    [cell.avatarImage addGestureRecognizer:tapped];
     
     return cell;
     

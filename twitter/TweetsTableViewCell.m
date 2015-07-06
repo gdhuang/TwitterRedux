@@ -8,7 +8,7 @@
 
 #import "TweetsTableViewCell.h"
 #import <UIImageView+AFNetworking.h>
-
+#import "ProfileViewController.h"
 
 
 @implementation TweetsTableViewCell
@@ -16,6 +16,11 @@
 - (void)awakeFromNib {
     // Initialization code
 }
+
+- (IBAction)onTapAvatar:(id)sender {
+    NSLog(@"aaa");
+}
+
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
@@ -26,6 +31,7 @@
 
 - (void)setTweet:(Tweet *)tweet {
     _tweet = tweet;
+    _user = tweet.user;
     
     self.text.text = _tweet.text;
     self.name.text = _tweet.user.name;

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Tweet.h"
+#import "User.h"
 
 @interface TweetsTableViewCell : UITableViewCell
 
@@ -21,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *retweetBtn;
 @property (weak, nonatomic) IBOutlet UIButton *favoriteBtn;
 
+@property (weak, nonatomic) User* user;
 @property (strong, nonatomic) Tweet* tweet;
 
 @end

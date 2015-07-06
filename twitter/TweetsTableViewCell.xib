@@ -13,8 +13,9 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q4C-Wt-jvS">
+                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q4C-Wt-jvS">
                         <rect key="frame" x="8" y="20" width="60" height="60"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="width" constant="60" id="Vfu-Wp-iBe"/>
                             <constraint firstAttribute="height" constant="60" id="XPU-d5-ub2"/>
@@ -101,6 +102,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <gestureRecognizers/>
                 <constraints>
                     <constraint firstItem="WUD-dJ-6PP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="10W-bQ-odq"/>
                     <constraint firstItem="xfa-M3-QJG" firstAttribute="top" secondItem="WUD-dJ-6PP" secondAttribute="bottom" constant="8" id="6ud-0N-hTV"/>
@@ -139,6 +141,7 @@
                     </mask>
                 </variation>
             </tableViewCellContentView>
+            <gestureRecognizers/>
             <connections>
                 <outlet property="avatarImage" destination="Q4C-Wt-jvS" id="GtU-Xd-JTc"/>
                 <outlet property="favoriteBtn" destination="Ywi-U5-hfW" id="dEj-G7-9fe"/>

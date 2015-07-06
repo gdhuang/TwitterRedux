@@ -43,6 +43,7 @@
 		EBDC33131B48CA6600B19493 /* ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDC33111B48CA6600B19493 /* ContentViewController.m */; };
 		EBDC33141B48CA6600B19493 /* ContentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBDC33121B48CA6600B19493 /* ContentViewController.xib */; };
 		EBDC33171B48EFA400B19493 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDC33161B48EFA400B19493 /* MenuViewController.m */; };
+		EBDD38171B4A072000EF7776 /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = EBDD38161B4A072000EF7776 /* twitter.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +112,7 @@
 		EBDC33121B48CA6600B19493 /* ContentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentViewController.xib; sourceTree = "<group>"; };
 		EBDC33151B48EFA400B19493 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		EBDC33161B48EFA400B19493 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		EBDD38161B4A072000EF7776 /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter.png; sourceTree = "<group>"; };
 		F2A501A7AD8E181FD6B62C11 /* Pods-twitter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twitter.release.xcconfig"; path = "Pods/Target Support Files/Pods-twitter/Pods-twitter.release.xcconfig"; sourceTree = "<group>"; };
 		F70D5F81FD9CCD23519C4DBF /* Pods-twitter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twitter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-twitter/Pods-twitter.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -183,6 +185,7 @@
 				EBA3DDF41B43C383005B679F /* TweetDetailsViewController.h */,
 				EBA3DDF51B43C383005B679F /* TweetDetailsViewController.m */,
 				EBA3DDF61B43C383005B679F /* TweetDetailsViewController.xib */,
+				EBDD38161B4A072000EF7776 /* twitter.png */,
 				EBA34A961B42E0AB0002A6F5 /* favorite.png */,
 				EBA3DDFB1B43D9B8005B679F /* favorite_on.png */,
 				EBA34A981B42E0B50002A6F5 /* reply.png */,
@@ -358,6 +361,7 @@
 				EBDC330F1B48CA4100B19493 /* MyMenuViewController.xib in Resources */,
 				EBA3DDFC1B43D9B8005B679F /* favorite_on.png in Resources */,
 				EBDC33001B48C3DC00B19493 /* SideMenuViewController.xib in Resources */,
+				EBDD38171B4A072000EF7776 /* twitter.png in Resources */,
 				EB4AAF9A1B405343001BA986 /* LoginViewController.xib in Resources */,
 				EBDC33051B48C81A00B19493 /* MentionsViewController.xib in Resources */,
 			);

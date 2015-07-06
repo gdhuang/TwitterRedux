@@ -32,7 +32,7 @@
     
     self.tweetsViewController = [[TweetsViewController alloc] initWithNibName:@"TweetsViewController" bundle:nil];
     self.mentionsViewController = [[MentionsViewController alloc] initWithNibName:@"MentionsViewController" bundle:nil];
-    self.profileViewController = [[ProfileViewController alloc] initWithNibName:@"ProfileViewController" bundle:nil];
+    self.profileViewController = [[ProfileViewController alloc] initWithUser:[User currentUser]];
     self.nvc = [[UINavigationController alloc] init];
     
     self.nvc.view.frame = self.view.frame;
